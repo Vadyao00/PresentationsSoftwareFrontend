@@ -280,6 +280,10 @@ export class SignalRService {
   async disconnect(): Promise<void> {
     if (this.hubConnection) {
       try {
+        if (this.isConnected()) {
+          await this.hubConnection.invoke('LeavePresentation');
+        }
+
         await this.hubConnection.stop();
         console.log('Disconnected from SignalR hub');
       } catch (error) {
