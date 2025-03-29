@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { Presentation } from '../models';
 
-const API_URL = 'http://localhost:5227/api';
+const API_URL = 'https://presentationssoftware.runasp.net/api';
 
 export const apiService = {
   getPresentations: async (): Promise<Presentation[]> => {

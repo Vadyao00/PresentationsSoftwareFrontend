@@ -3,7 +3,7 @@ import {
   Presentation, Slide, SlideElement, PresentationUser, UserRole 
 } from '../models';
 
-const HUB_URL = 'http://localhost:5227/presentationHub';
+const HUB_URL = 'https://presentationssoftware.runasp.net/presentationHub';
 
 export class SignalRService {
   private hubConnection: signalR.HubConnection | null = null;
